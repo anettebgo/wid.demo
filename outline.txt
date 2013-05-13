@@ -1,0 +1,19 @@
+Title: An example of a map/reduce algorithm using R and Hadoop
+
+Abstract: R has been described as 'a DSL for statistical analysis'. Hadoop is for LARGE scale computing. Between them, they can take on a number of interesting problems - once you get them to play together. Which is actually both easier and more accessible than you might think. In this demo I will solve a simple map/reduce problem in R, and run it on an Amazon EMR cluster. 
+
+Level: Beginner
+
+Most relevant for: Anyone - but especially academics - who needs to do mathematical transformations on large data sets.
+
+Outline:
+Slide 1: Intro
+Slide 2: Why R
+Slide 3: Why hadoop
+Slide 4: What is a map/reduce algorithm
+Demo: R code
+Demo: AWS console
+Demo: Submitting a job (bash script)
+Demo: Inspecting running jobs
+Demo: Inspecting result
+Questions

@@ -1,0 +1,7 @@
+- What is package getopt?
+
+
+
+gotchas:
+- File permissions must be set to executable
+- chunkSize is the MAX number of lines to be read - you can also expect any smaller number
