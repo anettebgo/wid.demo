@@ -1,3 +1,4 @@
 #!/bin/bash
 
-cat data.txt | ./mapper.R | ./reducer.R
+rm *.tmp
+cat data.txt | ./mapper.R | sort | ./reducer.R

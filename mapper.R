@@ -3,15 +3,22 @@
 library(HadoopStreaming)
 library(getopt)
 
-doStuff <- function(chunk.of.text){
+#transform input to a uniform and processable stream of data, consisting of key/value pairs 
+emit <- function(chunk.of.text){
+  
   words <- strsplit(chunk.of.text, " ")
-  print(length(words))
+  
+  sapply(words, function(word){
+      write(paste(word, "1"), file=stdout())
+  })
+  
 }
 
 
 (function() {
   input <- file("stdin", open="r")
   
-  hsLineReader(file = input, chunkSize = 3, skip = 0, FUN = doStuff)
+  #read input in reasonable cunks and apply emit to each chunk
+  hsLineReader(file = input, chunkSize = 3, skip = 0, FUN = emit)
   
 })()
