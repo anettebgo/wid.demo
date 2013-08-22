@@ -3,10 +3,10 @@
 library(HadoopStreaming)
 library(getopt)
 
-process <- function(df){
+process <- function(piece.of.map){
   #aggregate the values per word
-  result <- aggregate(x=df$value, by=list(word=df$word), FUN=function(d){
-    sum(as.integer(d))
+  result <- aggregate(x=piece.of.map$value, by=list(word=piece.of.map$word), FUN=function(map.values){
+    sum(as.integer(map.values))
   })
   
   #write a nicely formatted table
