@@ -3,10 +3,10 @@
 # turn on logging and exit on error
 set -e -x
 
-BOOTSTRAP_BUCKET_NAME='map-reduce.demo.wid'
+BOOTSTRAP_BUCKET_NAME='<your-bucket-name>'
 
 # grab packages from S3
-hadoop dfs -copyToLocal s3n://${BOOTSTRAP_BUCKET_NAME}/R/* .
+hadoop dfs -copyToLocal s3n://${BOOTSTRAP_BUCKET_NAME}/R_packages/* .
 DEB_HOST_ARCH=`dpkg-architecture -qDEB_HOST_ARCH`
 
 #upgrade R
